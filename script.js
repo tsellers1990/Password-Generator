@@ -3,7 +3,7 @@
     var passwordBox = document.getElementById("password");
     var alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
     var alphaNum = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789'.split('');
-    var alphaSpec = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-_=+'.split('');
+    var alphaSpec = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*'.split('');
     var alphaNumSpec = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789!@#$%^&*()-_=+'.split('');
     var passwordText = document.querySelector("#password");
     var numResults = []; 
@@ -28,19 +28,19 @@
               
             }} else if (specialChars !== true && numberChars){
               for (i = 0; i < passwordLength; i++) {
-                var randomNumber = Math.floor(Math.random()*numberChars.length); // selects a random number
-                var hold = numberChars[randomNumber];//This is selecting the string of random number x1
+                var randomNumber = Math.floor(Math.random()*alphaNum.length); // selects a random number
+                var hold = alphaNum[randomNumber];//This is selecting the string of random number x1
                 numResults.push(hold);//pushes the random char into an array
                 passwordThisIs = numResults.join(''); //squishes the array into a string How to no commas?
-              }}
+              }} //throws a goof
               
               else if (specialChars && numberChars !== true) {
                 for (i = 0; i < passwordLength; i++) {
-                  var randomNumber = Math.floor(Math.random()*specialChars.length); // selects a random number
-                  var hold = specialChars[randomNumber];//This is selecting the string of random number x1
+                  var randomNumber = Math.floor(Math.random()*alphaSpec.length); // selects a random number
+                  var hold = alphaSpec[randomNumber];//This is selecting the string of random number x1
                   numResults.push(hold);//pushes the random char into an array
                   passwordThisIs = numResults.join(''); //squishes the array into a string How to no commas?
-                }} 
+                }}  //throws a goof
                 
                 else {
                   for (i = 0; i < passwordLength; i++) {
