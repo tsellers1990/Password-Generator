@@ -32,7 +32,7 @@
                 var hold = alphaNum[randomNumber];//This is selecting the string of random number x1
                 numResults.push(hold);//pushes the random char into an array
                 passwordThisIs = numResults.join(''); //squishes the array into a string How to no commas?
-              }} //throws a goof
+              }} 
               
               else if (specialChars && numberChars !== true) {
                 for (i = 0; i < passwordLength; i++) {
@@ -40,7 +40,7 @@
                   var hold = alphaSpec[randomNumber];//This is selecting the string of random number x1
                   numResults.push(hold);//pushes the random char into an array
                   passwordThisIs = numResults.join(''); //squishes the array into a string How to no commas?
-                }}  //throws a goof
+                }}  
                 
                 else {
                   for (i = 0; i < passwordLength; i++) {
